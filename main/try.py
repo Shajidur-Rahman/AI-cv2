@@ -14,7 +14,7 @@ capture.set(10,100)
 
 while True:
     _, frame = capture.read()
-    frame = cv2.Canny(frame, 100, 100)
+    frame = cv2.resize(frame, (300, 200))
     cv2.imshow("Video", frame)
 
     if cv2.waitKey(1) & 0xff == ord("q"):
